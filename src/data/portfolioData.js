@@ -15,6 +15,7 @@ export const profile = {
     'SQL and data validation',
     'Enterprise workflow understanding',
   ],
+  resumeUrl: '/samiksha-portfolio/Samiksha-Soni-Resume.pdf',
 };
 
 export const navItems = [
@@ -23,6 +24,7 @@ export const navItems = [
   { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
   { label: 'Experience', href: '#experience' },
+  { label: 'Download Resume', href: '/samiksha-portfolio/Samiksha-Soni-Resume.pdf', download: true },
   { label: 'Contact', href: '#contact' },
 ];
 

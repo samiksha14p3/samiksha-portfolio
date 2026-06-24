@@ -90,7 +90,14 @@ function Navbar({ theme, onThemeToggle }) {
 
       <nav className={isOpen ? 'nav-links open' : 'nav-links'} aria-label="Primary navigation">
         {navItems.map((item) => (
-          <a key={item.href} href={item.href} onClick={closeMenu}>
+          <a
+            key={item.href}
+            href={item.href}
+            onClick={closeMenu}
+            download={item.download ? 'Samiksha-Soni-Resume.pdf' : undefined}
+            target={item.download ? '_blank' : undefined}
+            rel={item.download ? 'noreferrer' : undefined}
+          >
             {item.label}
           </a>
         ))}
@@ -165,9 +172,13 @@ function Hero() {
             <a className="ghost-btn" href={`mailto:${profile.email}`}>
               Hire Me <Mail size={18} />
             </a>
-            <button className="text-btn" type="button" onClick={() => window.print()}>
-              <Download size={18} /> Print Resume
-            </button>
+            <a
+              className="text-btn"
+              href={profile.resumeUrl}
+              download="Samiksha-Soni-Resume.pdf"
+            >
+              <Download size={18} /> Download Resume
+            </a>
           </div>
         </motion.div>
 
